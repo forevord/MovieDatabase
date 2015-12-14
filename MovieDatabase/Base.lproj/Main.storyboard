@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3fv-6W-B0Q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Movie List View Controller-->
+        <scene sceneID="uh8-Vp-p6c">
+            <objects>
+                <collectionViewController id="3fv-6W-B0Q" customClass="MovieListViewController" customModule="MovieDatabase" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="n0R-e1-dEM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j6k-AB-aoe">
+                            <size key="itemSize" width="140" height="220"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7tZ-r9-kcs" customClass="MovieCollectionViewCell" customModule="MovieDatabase" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="140" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-Yi-Nsy">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="181"/>
+                                            <animations/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVt-eV-lHf">
+                                            <rect key="frame" x="0.0" y="189" width="140" height="31"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="31" id="uX1-eS-eyb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3a3-Yi-Nsy" secondAttribute="trailing" id="2I1-uA-9NO"/>
+                                    <constraint firstAttribute="bottom" secondItem="uVt-eV-lHf" secondAttribute="bottom" id="2PX-Xg-oBF"/>
+                                    <constraint firstItem="3a3-Yi-Nsy" firstAttribute="top" secondItem="7tZ-r9-kcs" secondAttribute="top" id="AEz-Oq-BM4"/>
+                                    <constraint firstItem="uVt-eV-lHf" firstAttribute="leading" secondItem="7tZ-r9-kcs" secondAttribute="leading" id="LoB-2L-plP"/>
+                                    <constraint firstAttribute="trailing" secondItem="uVt-eV-lHf" secondAttribute="trailing" id="MmF-lM-0qI"/>
+                                    <constraint firstItem="uVt-eV-lHf" firstAttribute="top" secondItem="3a3-Yi-Nsy" secondAttribute="bottom" constant="8" id="eHe-kW-F8H"/>
+                                    <constraint firstItem="3a3-Yi-Nsy" firstAttribute="leading" secondItem="7tZ-r9-kcs" secondAttribute="leading" id="frk-XL-SNi"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="movieImageView" destination="3a3-Yi-Nsy" id="6TD-Z8-NCg"/>
+                                    <outlet property="movieTitleLabel" destination="uVt-eV-lHf" id="Trt-Lt-Yh2"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3fv-6W-B0Q" id="qEC-sG-GPU"/>
+                            <outlet property="delegate" destination="3fv-6W-B0Q" id="jpn-Kl-fuT"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUP-mL-8IS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="388"/>
+        </scene>
+    </scenes>
+</document>
